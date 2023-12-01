@@ -22,7 +22,7 @@ receivers:
           static_configs:
             - targets: 
                 - broker1:7071
-                - broker2:7072
+                # - broker2:7072
           relabel_configs:
             - source_labels: [ ]
               target_label: cluster
