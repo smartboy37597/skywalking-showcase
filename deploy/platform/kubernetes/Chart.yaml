@@ -49,6 +49,16 @@ dependencies:
     repository: https://charts.bitnami.com/bitnami
     condition: rabbitmq.enabled
 
+  - name: kafka
+    version: 26.4.3
+    repository: https://charts.bitnami.com/bitnami
+    condition: kafka.enabled
+
+  - name: zookeeper
+    version: 12.3.3
+    repository: https://charts.bitnami.com/bitnami
+    condition: zookeeper.enabled
+
   - name: mongodb
     version: 13.16.0
     repository: https://charts.bitnami.com/bitnami

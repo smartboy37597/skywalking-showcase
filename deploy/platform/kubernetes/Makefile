@@ -150,6 +150,13 @@ feature-rabbitmq-monitor:
 	$(eval HELM_OPTIONS := $(HELM_OPTIONS) --set rabbitmq.enabled=true)
 	$(eval HELM_OPTIONS := $(HELM_OPTIONS) --set opentelemetry.enabled=true)
 
+.PHONY: feature-kafka-monitor
+feature-kafka-monitor:
+	$(eval HELM_OPTIONS := $(HELM_OPTIONS) --set features.kafkaMonitor.enabled=true)
+	$(eval HELM_OPTIONS := $(HELM_OPTIONS) --set kafka.enabled=true)
+	$(eval HELM_OPTIONS := $(HELM_OPTIONS) --set zookeeper.enabled=true)
+	$(eval HELM_OPTIONS := $(HELM_OPTIONS) --set opentelemetry.enabled=true)
+
 .PHONY: feature-mongodb-monitor
 feature-mongodb-monitor:
 	$(eval HELM_OPTIONS := $(HELM_OPTIONS) --set features.mongodbMonitor.enabled=true)
